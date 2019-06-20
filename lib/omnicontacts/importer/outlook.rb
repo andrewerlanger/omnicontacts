@@ -30,6 +30,7 @@ module OmniContacts
       def fetch_current_user access_token, token_type
         self_response = https_get(@contacts_host, @self_path, {}, contacts_req_headers(access_token, token_type))
         user = current_user self_response
+        user[:access_token] = access_token
         set_current_user user
       end
 
