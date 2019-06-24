@@ -1,8 +1,8 @@
 module OmniContacts
-  
+
   VERSION = "0.3.10"
 
-  MOUNT_PATH = "/contacts/"
+  MOUNT_PATH = "/import/"
 
   autoload :Builder, "omnicontacts/builder"
   autoload :Importer, "omnicontacts/importer"
@@ -15,5 +15,5 @@ module OmniContacts
   def self.integration_test
     IntegrationTest.instance
   end
-  
+
 end
